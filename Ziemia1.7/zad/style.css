@@ -1,0 +1,78 @@
+body
+{
+    background: gray;
+}
+
+#OknoLog
+{
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    text-align: center;
+    color: darkgreen;
+    background: black;
+    font-family: sans-serif;
+    box-shadow: 0 0 2em 0 currentColor;
+}
+
+input:hover
+{
+    box-shadow: 0 0 1em 0 rgb(31, 129, 31);
+    background:rgb(31, 129, 31);
+}
+
+input
+{
+    box-shadow: 0 0 0.7em 0 darkgreen;
+    background: darkgreen;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+input[type="button"]
+{
+    border-radius: 9px;
+}
+
+div>strong
+{
+    color:darkred;
+}
+
+#chapta2 > input[type="checkbox"]
+{
+    /* tylko do checkboxa */
+    box-shadow:  0 0 1em 0.1em red;
+    background: darkgreen;
+    
+}
+
+#chapta2> input[type="checkbox"]:checked
+{
+    /* tylko do checkboxa */
+    box-shadow:  0 0 1em 0.1em lightskyblue;
+    background: darkgreen;
+}
+
+#chapta2
+{
+    padding: 15px;
+    
+}
+
+#chapta
+{
+    color: darkgreen;
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 400px;
+    margin-top: 25px;
+    background: black;
+    border-radius: 10px;
+    box-shadow:  0 0 1em 0 darkgreen;
+}

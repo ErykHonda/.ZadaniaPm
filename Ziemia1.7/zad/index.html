@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logowanie</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="OknoLog">
+        <h1>Logowanie</h1>
+        <form name="formulaz">
+            <div id="Plogino">
+                Login: <input type="text" id="logino">
+            </div>
+                <br>
+            <div id="Ppasword">
+                Hasło: <input type="password" id="haslo">
+            </div>
+            <br>
+            <input type="button" value="Zaloguj" onclick="logowanie(document.formulaz.logino.value,document.formulaz.haslo.value)">
+        </form>
+    </div>
+    <div id="chapta">
+        <div id="chapta2">
+            <input type="checkbox" value="test" id="zatchpa"> Nie Jestem Robotem
+        </div>
+    </div>
+</body>
+</html>
