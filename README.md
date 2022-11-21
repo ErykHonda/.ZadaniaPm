@@ -18,4 +18,4 @@ czysty(prowadzi do README.md):
 https://erykhonda.github.io/.ZadaniaPm/
 
 przykładowy: 
-https://erykhonda.github.io/.ZadaniaPm/Ziemia/ziemia1.9/index.html
+https://erykhonda.github.io/.ZadaniaPm/Ziemia/Ziemia1.9/index.html
