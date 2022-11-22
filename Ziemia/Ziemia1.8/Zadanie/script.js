@@ -3,8 +3,11 @@
 const THasla = ["Admin", "User"];
 const TLogin = ["Admin", "User"];
 
-
-
+function OTWOK(login)
+{
+    var zalogowano = document.open("","","");
+    zalogowano.document.write(login)
+}
 
 function logowanie(loginek, haselko)
 {
@@ -57,6 +60,7 @@ function logowanie(loginek, haselko)
             {
                 console.log("");
                 console.log("zalogowano");
+                OTWOK(loginek);
                 Slogoia = true;
             }
             
