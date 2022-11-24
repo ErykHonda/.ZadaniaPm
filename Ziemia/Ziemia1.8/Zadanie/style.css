@@ -3,11 +3,13 @@ body
     background: gray;
 }
 
-#OknoKol
+#OknoKol 
 {
+    
     margin-left: auto;
     margin-right: auto;
-    height: 65px;
+    
+    height: auto;
     width: 400px;
     border-radius: 20px;
     text-align: center;
@@ -55,98 +57,20 @@ strong
     color:darkred;
 }
 
-#chapta2 > input[type="checkbox"]
-{
-    /* tylko do checkboxa */
-    box-shadow:  0 0 1em 0.1em red;
-    background: darkgreen;
-    
-}
-
-#chapta2> input[type="checkbox"]:checked
-{
-    /* tylko do checkboxa */
-    box-shadow:  0 0 1em 0.1em lightskyblue;
-    background: darkgreen;
-}
-
-#chapta2
-{
-    padding: 15px;
-    
-}
-
-#chapta
-{
-    color: darkgreen;
-    font-family: sans-serif;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    width: 400px;
-    margin-top: 25px;
-    background: black;
-    border-radius: 10px;
-    box-shadow:  0 0 1em 0 darkgreen;
-}
-
-.z-diff#ListOpen
-{
-    color: darkgreen;
-    font-family: sans-serif;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 25px;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow:  0 0 1em 0 darkgreen;
-    background: black;
-}
-
-.r-diff#ListOpen
-{
-    color: darkgreen;
-    font-family: sans-serif;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100px;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow:  0 0 1em 0 darkgreen;
-    background: black;
-}
 /**/
 
 
 .CzerwoBlack#OknoLog
 {
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    width: 400px;
-    border-radius: 20px;
-    text-align: center;
     color: #2D2A32;
     background: #9B1C3D;
-    font-family: sans-serif;
-    box-shadow: 0 0 2em 0 currentColor;
 }
 
-.CzerwoBlack#OknoKol
+.CzerwoBlack#OknoKol 
 {
-    margin-left: auto;
-    margin-right: auto;
-    height: 65px;
-    width: 400px;
-    border-radius: 20px;
-    text-align: center;
     color: #2D2A32;
     background: #9B1C3D;
-    font-family: sans-serif;
-    box-shadow: 0 0 2em 0 currentColor;
+
 }
 
 .CzerwoBlack strong
@@ -157,8 +81,6 @@ strong
 {
     box-shadow: 0 0 0.7em 0 #EF1F4D;
     background: #EF1F4D;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .CzerwoBlack input:hover
@@ -169,30 +91,14 @@ strong
 
 .CzarnoNiebieski#OknoLog
 {
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    width: 400px;
-    border-radius: 20px;
-    text-align: center;
     color: #6DB4E4;
     background: #121D37;
-    font-family: sans-serif;
-    box-shadow: 0 0 2em 0 currentColor;
 }
 
 .CzarnoNiebieski#OknoKol
 {
-    margin-left: auto;
-    margin-right: auto;
-    height: 65px;
-    width: 400px;
-    border-radius: 20px;
-    text-align: center;
     color: #6DB4E4;
     background: #121D37;
-    font-family: sans-serif;
-    box-shadow: 0 0 2em 0 currentColor;
 }
 
 .CzarnoNiebieski strong
@@ -204,12 +110,28 @@ strong
 {
     box-shadow: 0 0 0.7em 0 #244A84;
     background: #244A84;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .CzarnoNiebieski input:hover
 {
     box-shadow: 0 0 1em 0 #244Abb;
     background:#244Abb;
+}
+
+/*-------------------------------------*/
+#ListKol
+{
+    line-height:2.5em;
+}
+
+#ListKol input
+{
+    width: 40%;
+    height: 2em;
+}
+
+
+#ListKol.LOFF
+{
+    display: none;
 }

@@ -3,6 +3,12 @@
 const THasla = ["Admin", "User"];
 const TLogin = ["Admin", "User"];
 
+function StartWeb()
+{
+    KLRoz();
+}
+
+
 function OTWOK(login)
 {
     var zalogowano = document.open("","","");
@@ -78,10 +84,10 @@ function logowanie(loginek, haselko)
 
 function Zkolor(K)
 {
+    var settingsColor;
+
     var ele1 = document.getElementById("OknoLog");
-
     var ele2 = document.getElementById("OknoKol");
-
     var ele3 = document.getElementById("ListOpen");
 
     var att = document.createAttribute("class");
@@ -90,12 +96,37 @@ function Zkolor(K)
 
     switch(K)
     {
-        case 1: att.value = "CzerwoBlack" ;  att1.value = "CzerwoBlack" ;break;
-        case 2: att.value = "CzarnoNiebieski";  att1.value = "CzarnoNiebieski" ; break;
-        default:
+        case 1: settingsColor =  "CzerwoBlack" ;  break;
+        case 2: settingsColor = "CzarnoNiebieski" ; break;
+        default: settingsColor ="";break;
     }
+    att.value = settingsColor;
+    att1.value = settingsColor;  
+    att3.value = settingsColor;
 
     ele1.setAttributeNode(att);
     ele2.setAttributeNode(att1);
+    ele3.setAttributeNode(att3);
+
+}
+
+function KLRoz()
+{
+    var napis = document.getElementById("POKKol");
+    var przyciski = document.getElementById("ListKol");
+    var klasa = document.createAttribute("class")
+    var OnOFF;
+
+    if(napis.innerHTML=="Rozwin Liste")
+    {
+        OnOFF = "LON"
+        napis.innerHTML="Zwin Liste"
+    }else
+    {
+        OnOFF = "LOFF"
+        napis.innerHTML="Rozwin Liste"
+    }
+    klasa.value=OnOFF;
+    przyciski.setAttributeNode(klasa);
 
 }
