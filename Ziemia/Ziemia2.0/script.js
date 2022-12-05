@@ -107,12 +107,12 @@ function przycisk()
         ss
     </div>
 
-*/
+
 
 var s1 = '2+2';//primityw
 var s2 = new String(s1)//obiekt
 var zm = s2.valueOf() //zwraca element jako primityw
-/*
+
 document.write(s1);
 document.write("<br>");
 document.write(s2);
@@ -128,5 +128,6 @@ document.write("<br>");
 
 document.write(typeof (s2.valueOf()));
 document.write("<br>");
+
+document.write(eval(s2))
 */
-document.write(typeof zm)
