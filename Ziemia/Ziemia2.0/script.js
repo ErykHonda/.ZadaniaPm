@@ -70,9 +70,53 @@ document.write(typeof obj2)
 var y = 'pies'[1];
 document.write(typeof y)
 
-*/
+
 
 var s_prim = 'foo';
 let s_obj = String(s_prim);
 console.log(typeof s_prim)
 console.log(typeof s_obj)
+var a = prompt("podaj tekst")
+let a_obj = eval(a)
+document.write(typeof a_obj)
+document.write(a+a+"\n")
+document.write(a_obj+a_obj+"\n")
+
+
+function przycisk()
+{
+    const obiekt = document.getElementById("tekst1")
+    const obiekt1 = document.getElementById("bloczek")
+    zawartosc = obiekt.value
+    zawartosc1= obiekt1.outerHTML
+    var x = zawartosc
+    //var x = eval(zawartosc)
+    console.log(zawartosc1)
+    //console.log(zawartosc+zawartosc)
+    console.log(typeof zawartosc1)
+    
+    return 0;
+}
+
+
+<div>
+        Text <input type="text" id="tekst1">
+        <input type="button" onclick="przycisk()" value="sprawdz">    
+    </div>
+    <div id="bloczek">
+        ss
+    </div>
+
+*/
+
+var s1 = '2+2';
+var s2 = new String('2+2')
+
+document.write(s1);
+document.write("<br>");
+document.write(s2);
+document.write("<br>");
+document.write(eval(s1));
+document.write("<br>");
+document.write(eval(s2));
+document.write("<br>");
