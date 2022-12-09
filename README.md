@@ -4,7 +4,7 @@ pm 4 - ZiemiaX.X
 
 pm 5 - (jak będzie to dopisze)
 
-pm 6 - (jak będzie to dopisze)
+pm 6 - PlutonX.X
 
 oby odpalić strone nie pobierając plików można wejść na strone:
 
