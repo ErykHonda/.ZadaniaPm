@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        var dyskografia = '{"tytul" : "Billie Jean","album" : "Thriller","wydanie" : 1983}';
+        let odczyt = JSON.parse(dyskografia);
+        document.write("Tytuł: "+odczyt.tytul+" - "+ typeof odczyt.tytul);
+        document.write("<br>album: "+odczyt.album+" - "+ typeof odczyt.album);
+        document.write("<br>wydane: "+odczyt.wydanie+" - "+typeof odczyt.wydanie);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
