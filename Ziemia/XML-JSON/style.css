@@ -1,0 +1,43 @@
+body
+{
+    background-color: antiquewhite;
+    
+}
+
+.Converter-Area-R
+{
+    height: 401px;
+    margin: 5px; 
+    width: 40%;
+    resize: none;
+    float: left;
+    
+}
+.Converter-Area-L
+{
+    height: 401px;
+    margin: 5px; 
+    width: 40%;
+    resize: none;
+    float: left;
+    
+}
+
+input
+{
+    margin-top: calc((401px - 21px)/2);
+    width: 10%;
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5px; 
+
+}
+
+
+.Window-Main div
+{
+    float: left;
+    margin: 5px;
+}
