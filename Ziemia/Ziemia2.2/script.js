@@ -19,5 +19,14 @@ function ZmianaDiva()
 
 function ZdalnaDiva()
 {
-    $("#divek").load('pierogi.json')
+    $("#divek").load('pierogi.json','',
+    function(zawartosc, statusTxt , xhl)
+    {
+       if(statusTxt != "success") return 0;
+       const joobiekt = JSON.parse(zawartosc);
+        document.getElementById("divek").innerHTML="Producent: "+joobiekt.producent
+    }
+    )
+    //const coWS = document.getElementById("divek").innerHTML
+    //console.log(coWS)
 }
