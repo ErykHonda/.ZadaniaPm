@@ -12,12 +12,13 @@
 <body onload="StartingSeting('ENG')" >
     <input type="button" value="PL" onclick="setLanguage('PL')">
     <input type="button" value="ENG" onclick="setLanguage('ENG')">
+    <input type="button" value="XXX" onclick="HideElement(0)">
     <div style="display: none;" id="LoadLanguage"></div>
     <div class="list">
         <div class="l-top">
             <h1>Lista Nr: <span>1</span></h1>
             <div class="minimalized">
-                <h1>X</h1>
+                <h1 onclick="HideElement(0)">+</h1>
             </div>
         </div>
         <div class="to-hide">

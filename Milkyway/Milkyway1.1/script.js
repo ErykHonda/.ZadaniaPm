@@ -12,6 +12,24 @@ function StartingSeting(Lang)
     setLanguage(Lang)
 }
 
+function HideElement(who)
+{
+    const lista = document.getElementsByClassName("to-hide")[who]
+    const OnOff = document.getElementsByClassName("minimalized")[who].childNodes[0]
+    console.log(OnOff)
+    if(OnOff.innerHTML=="--")
+    {
+        OnOff.innerHTML="+";
+        $(lista).hide()
+    }else
+    {
+        OnOff.innerHTML="--";
+        $(lista).show()
+    }
+    
+    
+}
+
 function AddMissingElement()
 {
     if(ListyIn.length==ListyOut.length)
@@ -107,10 +125,10 @@ function LoadBufor(n)
     bufor +='<div class="l-top">';
     bufor +='<h1>'+ListNumber+'<span>'+(n)+'</span></h1>';
     bufor +='<div class="minimalized">';
-    bufor +='<h1>X</h1>';
+    bufor +='<h1 onclick="HideElement('+(n-1)+')">--</h1>';
     bufor +=    '</div>';
     bufor += '</div>';
-    bufor += '<div class="to-hide">';
+    bufor += '<div class="to-hide" style="">';
     bufor +=    '<div class="l-mid">';
     bufor +=         '<div class="mid-up">';
     bufor +=             '<div class="mid-up-in">';
