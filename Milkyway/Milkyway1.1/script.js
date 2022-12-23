@@ -1,7 +1,30 @@
-const ListyIn = [[],]
+const ListaIn1 = ["Mleko","Chleb"];
+const ListaOut1 = ["Bułka"];
+const ListaIn2 = ["Mleko1","Chleb1"];
+const ListaOut2 = ["Bułka1"];
+const ListyIn = [ListaIn1];
+const ListyOut = [ListaOut1];
 //tłumaczenie
-
 var ListNumber,buttValue,NonValueAdd,ShopList,DeleteList,NewList;//języki
+function StartingSeting(Lang)
+{
+    AddMissingElement()
+    setLanguage(Lang)
+}
+
+function AddMissingElement()
+{
+    if(ListyIn.length==ListyOut.length)
+    {
+        return 0;
+    }
+    var listyHTML = document.getElementsByClassName("list")
+    for(var i = 0 ; i<=(ListyIn.length - listyHTML.length);i++)
+    {
+        AddList()
+    }
+}
+
 function setLanguage(Lang)
 {
     var jasonLanguage;
@@ -38,17 +61,42 @@ function setLanguage(Lang)
         Refresh()
     }
     );
+    
 }
-
-
 
 function Refresh()
 {
-    for(var i = 0 ; i<=ListyIn.length ; i++)
+    for(var i = 0 ; i<=document.getElementsByClassName("list").length ; i++)
     {
         LoadList(i)
     }
     LoadFutter()
+}
+
+function GetToList(nr,InOut)
+{
+    var bufor=''
+    var fi = "<li>"
+    var en = "</li>"
+    switch(InOut)
+    {
+        case "IN":
+            for(var i = 0; i<ListyIn[nr].length ;i++)
+            {
+                bufor+=(fi+ListyIn[nr][i]+en)
+            }
+
+            break;
+        case "OUT":
+            for(var i = 0; i<ListyOut[nr].length ;i++)
+            {
+                bufor+=(fi+ListyOut[nr][i]+en)
+            }
+            break;
+        default:
+            return 0;
+    }
+    return bufor;
 }
 
 function LoadBufor(n)
@@ -88,8 +136,7 @@ function LoadBufor(n)
     bufor +=            '</div>';
     bufor +=            '<div class="lista-scroling">';
     bufor +=                '<ol>';
-    bufor +=                    '<li>lorem</li>';
-    bufor +=                   '<li>ipsum</li>';
+    bufor+=                 GetToList(n-1,'IN');
     bufor +=               '</ol>';
     bufor +=          '</div>';
     bufor +=        '</div>';
@@ -99,8 +146,7 @@ function LoadBufor(n)
     bufor +=           '</div>';
     bufor +=            '<div class="lista-scroling">';
     bufor +=                '<ul>';
-    bufor +=                    '<li>lorem</li>';
-    bufor +=                    '<li>ipsum</li>';
+    bufor+=                 GetToList(n-1,'OUT');
     bufor +=                '</ul>';
     bufor +=           '</div></div></div></div></div>';
     return bufor;
@@ -109,10 +155,24 @@ function LoadBufor(n)
 function AddList()
 {
     var NewList = []
-    ListyIn[ListyIn.length]=NewList
+    if(ListyIn.length==ListyOut.length)
+    {
+        ListyIn[ListyIn.length]=NewList
+        ListyOut[ListyOut.length]=NewList
+        console.log("=")
+    }else if(ListyIn.length>=ListyOut.length)
+    {
+        ListyOut[ListyOut.length]=NewList
+        console.log(">")
+    }else
+    {
+        ListyIn[ListyIn.length]=NewList
+        console.log("<")
+    }
+    
     
     var body = document.getElementsByTagName("body")[0]
-    var bufor = LoadBufor(ListyIn.length);
+    var bufor = LoadBufor((document.getElementsByClassName("list").length)+1);
     var footer = body.childNodes[(body.childNodes.length)-2].outerHTML
     body.childNodes[(body.childNodes.length)-2].outerHTML=bufor
     //console.log(footer)
@@ -130,9 +190,11 @@ function LoadList(nrList)
     }else toNrList = nrList
 
     var bufor = LoadBufor(toNrList);
+    
+    var WhatList = document.getElementsByClassName("list")[(toNrList-1)]
+    WhatList.outerHTML=bufor;
 
-   var WhatList = document.getElementsByClassName("list")[(toNrList-1)]
-   WhatList.outerHTML=bufor;
+    
 }
 
 function LoadFutter()
