@@ -3,12 +3,13 @@ body
     background-color: #8f89ad;
     color: #122A57;
     font-size: x-large;
+    padding: 10px;
 }
 
-.list
+footer, .list
 {
+    margin-top: 10px;
     background-color: #ad668d;
-    margin: 10px;
     padding: 10px;
     border-radius: 1.5em;
 }
@@ -127,4 +128,23 @@ body
 {
     height: 260px;
     overflow: hidden scroll;
+}
+
+.add-new-list-div, .add-new-list
+{
+    background-color: #faa0d2;
+    border-radius: 1.5em;
+    font-size: x-large;
+    width: 100%;
+    color: #122A57;
+}
+
+.add-new-list
+{
+    background:none;
+}
+
+.add-new-list:hover
+{
+    background-color:#00000023;
 }
