@@ -32,13 +32,23 @@ footer, .list
     display: inline;
     float: right;
     margin-right: 5px;
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 55px;
+    height: 55px;
+    user-select: none;
+}
 
+.minimalized:hover
+{
+    background-color: #00000023;
 }
 
 .l-top h1
 {
     display: inline;
 }
+
 
 .l-mid
 {
@@ -63,7 +73,7 @@ footer, .list
 
 .validation
 {
-    
+    user-select: none;
     font-size: x-large;
     color: red;
 }
@@ -113,6 +123,8 @@ footer, .list
     display: inline-block;
 }
 
+
+
 .bottom-right
 {
     float: right;
@@ -121,13 +133,23 @@ footer, .list
 .Name-Listy
 {
     text-align: center;
-
+    user-select: none;
 }
 
 .lista-scroling
 {
     height: 260px;
     overflow: hidden scroll;
+}
+
+.lista-scroling::-webkit-scrollbar, .lista-scroling::-webkit-scrollbar-track, .lista-scroling::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+}
+
+.lista-scroling::-webkit-scrollbar-thumb
+{
+    background-color: #00000058;
 }
 
 .add-new-list-div, .add-new-list

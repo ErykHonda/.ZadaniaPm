@@ -1,0 +1,179 @@
+body
+{
+    background-color: #010F00;
+    color: #FFFFFF;
+    font-size: x-large;
+    padding: 10px;
+}
+
+footer, .list
+{
+    margin-top: 10px;
+    background-color: #12330F;
+    padding: 10px;
+    border-radius: 1.5em;
+}
+
+.l-top, .l-mid, .l-bottom
+{
+    margin: 15px;
+    background-color: #065C00;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+.l-top
+{
+    text-align: center;
+}
+
+.minimalized
+{
+    display: inline;
+    float: right;
+    margin-right: 5px;
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 55px;
+    height: 55px;
+    user-select: none;
+}
+
+.minimalized:hover
+{
+    background-color: #00000023;
+}
+
+.l-top h1
+{
+    display: inline;
+}
+
+
+.l-mid
+{
+    height: auto;
+}
+
+.mid-up, .mid-down
+{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.mid-up
+{
+    display: flex;
+}
+.mid-up-in
+{
+    width: 1000px;
+    margin: 10px;
+}
+
+.validation
+{
+    user-select: none;
+    font-size: x-large;
+    color: #E1FF00;
+}
+
+.button-add
+{
+    font-size: x-large;
+    color: #ffffff;
+}
+
+.get-text
+{
+    font-size: x-large;
+    color: black;
+}
+
+.get-text
+{
+    width: 100%;
+}
+
+.button-add
+{
+    float: right;
+    background: none;
+    border: 1px solid black;
+}
+.button-add:hover
+{
+    background: #00000023;
+    border: 1px solid black;
+}
+
+.mid-down
+{
+    background-color: royalblue;
+}
+
+.l-bottom
+{
+    height: auto;
+}
+
+.bottom-left, .bottom-right
+{
+    background-color: #C3B9FA;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 4px;
+    height: 300px;
+    width: 40%;
+    display: inline-block;
+    color: black;
+}
+
+
+
+.bottom-right
+{
+    float: right;
+}
+
+.Name-Listy
+{
+    text-align: center;
+    user-select: none;
+}
+
+.lista-scroling
+{
+    height: 260px;
+    overflow: hidden scroll;
+}
+
+.lista-scroling::-webkit-scrollbar, .lista-scroling::-webkit-scrollbar-track, .lista-scroling::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+}
+
+.lista-scroling::-webkit-scrollbar-thumb
+{
+    background-color: #00000058;
+}
+
+.add-new-list-div, .add-new-list
+{
+    background-color: #065C00;
+    border-radius: 1.5em;
+    font-size: x-large;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.add-new-list
+{
+    background:none;
+}
+
+.add-new-list:hover
+{
+    background-color:#00000023;
+}
