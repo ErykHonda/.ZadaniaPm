@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <title>Lista Zakupów</title>
 </head>
-<body>
+<body onload="setLanguage()">
+    <input type="button" value="PL" onclick="setLanguage('PL')">
+    <input type="button" value="ENG" onclick="setLanguage('ENG')">
+    <input type="button" value="XXX" onclick="Refresh()">
+    <div style="display: none;" id="LoadLanguage"></div>
     <div class="list">
         <div class="l-top">
             <h1>Lista Nr: <span>1</span></h1>
@@ -43,18 +48,7 @@
                     </div>
                     <div class="lista-scroling">
                         <ol>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
+                            
                         </ol>
                     </div>
                 </div>
@@ -64,28 +58,14 @@
                     </div>
                     <div class="lista-scroling">
                         <ul>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dorem</li>
+                            
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="add-new-list-div">
-            <input type="button" value="Dodaj Nową Listę" class="add-new-list">
-        </div>
-    </footer>
+    <footer><div class="add-new-list-div"><input type="button" value="Dodaj Nową Listę" class="add-new-list" onclick="AddList()"></div></footer>
 </body>
+
 </html>
