@@ -1,0 +1,130 @@
+body
+{
+    background-color: #8f89ad;
+    color: #122A57;
+    font-size: x-large;
+}
+
+.list
+{
+    background-color: #ad668d;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1.5em;
+}
+
+.l-top, .l-mid, .l-bottom
+{
+    margin: 15px;
+    background-color: #faa0d2;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+.l-top
+{
+    text-align: center;
+}
+
+.minimalized
+{
+    display: inline;
+    float: right;
+    margin-right: 5px;
+
+}
+
+.l-top h1
+{
+    display: inline;
+}
+
+.l-mid
+{
+    height: auto;
+}
+
+.mid-up, .mid-down
+{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.mid-up
+{
+    display: flex;
+}
+.mid-up-in
+{
+    width: 1000px;
+    margin: 10px;
+}
+
+.validation
+{
+    
+    font-size: x-large;
+    color: red;
+}
+
+.get-text, .button-add
+{
+    font-size: x-large;
+    color: #122A57;
+}
+
+.get-text
+{
+    width: 100%;
+}
+
+.button-add
+{
+    float: right;
+    background: none;
+    border: 1px solid black;
+}
+.button-add:hover
+{
+    background: #00000023;
+    border: 1px solid black;
+}
+
+.mid-down
+{
+    background-color: royalblue;
+}
+
+.l-bottom
+{
+    height: auto;
+}
+
+.bottom-left, .bottom-right
+{
+    background-color: #C3B9FA;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 4px;
+    height: 300px;
+    width: 40%;
+    display: inline-block;
+}
+
+.bottom-right
+{
+    float: right;
+}
+
+.Name-Listy
+{
+    text-align: center;
+
+}
+
+.lista-scroling
+{
+    height: 260px;
+    overflow: hidden scroll;
+}
