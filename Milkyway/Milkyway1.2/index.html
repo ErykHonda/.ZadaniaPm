@@ -5,10 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        function onload()
+        {
+            //inDiv = document.getElementById("divek")
+            //bufor = "";
+            //bufor += new Date("jan 04  2023 11:57:10")
+            //bufor += new Date(2006,7,29,14,18,44,69)
+            //pierwsze 3 pokazują date a reszta czas
+            //bufor += new Date(0)
+            //bufor+="<Br>"
+            //bufor+= new Date(24*60*60*1000)
+            // inDiv.innerHTML = bufor;
+            aktualna = new Date()
+            /*
+            document.getElementById("czas1").innerHTML=aktualna;
+            document.getElementById("czas2").innerHTML=aktualna.toDateString()
+            document.getElementById("czas3").innerHTML=aktualna.toUTCString()
+            document.getElementById("czas4").innerHTML=aktualna.toISOString()
+            console.log(typeof aktualna.toDateString())
+            console.log(typeof aktualna.toUTCString())
+            console.log(typeof aktualna.toISOString())
+           */
+          const dni = ["niedziela","poniedzialek","wtorek","środa","czwartek","piątek","sobota"]
+          const miesiace = ["styczen","luty","marzec","kwiecien","maj","czerwiec","lipec","sierpień","wrześień","październik","listopad","grudzień"]
+           document.getElementById("divek").innerHTML = "Aktualna Data:<br>"+dni[(aktualna.getDay())]+", "+aktualna.getDate()+" "+miesiace[aktualna.getMonth()]+" "+aktualna.getFullYear()+" roku. Godzina: "+aktualna.getHours()+":"+aktualna.getMinutes()
+
+
+            setTimeout(onload, 1000)
+        }
+    </script>
 </head>
-<body>
+<body onload="onload()">
+    <div id="divek">
+
+    </div>
+    <div id="czas1">
+
+    </div>
+    <div id="czas2">
+
+    </div>
+    <div id="czas3">
+
+    </div>
+    <div id="czas4">
+
+    </div>
     
 </body>
 </html>
