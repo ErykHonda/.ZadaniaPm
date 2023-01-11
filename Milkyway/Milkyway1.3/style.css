@@ -1,0 +1,18 @@
+body
+{
+    background-color: antiquewhite;
+}
+
+#K-Kartka
+{
+    border: 1px solid black;
+    width: 300px;
+}
+
+.KL-Kartka
+{
+    border: 1px solid black;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+}

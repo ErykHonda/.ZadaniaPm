@@ -30,7 +30,7 @@
             console.log(typeof aktualna.toUTCString())
             console.log(typeof aktualna.toISOString())
            */
-          const dni = ["niedziela","poniedzialek","wtorek","środa","czwartek","piątek","sobota"]
+           const dni = ["niedziela","poniedzialek","wtorek","środa","czwartek","piątek","sobota"]
           const miesiace = ["styczen","luty","marzec","kwiecien","maj","czerwiec","lipec","sierpień","wrześień","październik","listopad","grudzień"]
            document.getElementById("divek").innerHTML = "Aktualna Data:<br>"+dni[(aktualna.getDay())]+", "+aktualna.getDate()+" "+miesiace[aktualna.getMonth()]+" "+aktualna.getFullYear()+" roku. Godzina: "+aktualna.getHours()+":"+aktualna.getMinutes()
 
