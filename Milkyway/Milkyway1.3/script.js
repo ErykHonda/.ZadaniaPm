@@ -19,13 +19,15 @@ function Validate()
         buffor+='<td class="KL-Kartka-PM">'+(PastLastDay-i+1)+'</td>'
         Day++
     }
-    
+    var WDay = 0
     var czykonec = false
     console.log(LastDay)
     console.log(Day)
     for(var i = Day ; i < 7 ; i++)
     {
-        buffor+='<td class="KL-Kartka"></td>'
+        WDay++
+        buffor+='<td class="KL-Kartka">'+WDay+'</td>'
+        
         Day++
     }
     buffor += '</tr>'
@@ -34,8 +36,9 @@ function Validate()
         buffor += '<tr>'
         for(var j = 0 ; j<7;j++)
         {
+            WDay++
             Day++
-            buffor+='<td class="KL-Kartka"></td>'
+            buffor+='<td class="KL-Kartka">'+WDay+'</td>'
             if(Day==LastDay)
             {
                 czykonec = true

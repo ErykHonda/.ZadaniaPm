@@ -3,16 +3,20 @@ body
     background-color: antiquewhite;
 }
 
-#K-Kartka,#KL-Kartka-PM
+#K-Kartka
 {
     border: 1px solid black;
     width: 300px;
 }
 
-.KL-Kartka
+.KL-Kartka, .KL-Kartka-PM
 {
     border: 1px solid black;
     width: 40px;
     height: 20px;
     text-align: center;
+}
+.KL-Kartka-PM
+{
+    color: gray;
 }
