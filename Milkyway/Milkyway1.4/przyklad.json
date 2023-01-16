@@ -1,0 +1,21 @@
+{
+    "latitude":52.25,
+    "longitude":21.0,
+    "generationtime_ms":0.3879070281982422,
+    "utc_offset_seconds":3600,
+    "timezone":"Europe/Berlin",
+    "timezone_abbreviation":"CET",
+    "elevation":113.0,
+    "daily_units":
+    {
+        "time":"unixtime",
+        "temperature_2m_max":"°C",
+        "temperature_2m_min":"°C"
+    },
+    "daily":
+    {
+        "time":[1673823600,1673910000,1673996400,1674082800,1674169200,1674255600,1674342000],
+        "temperature_2m_max":[4.8,4.5,0.7,0.7,0.6,2.5,2.2],
+        "temperature_2m_min":[1.4,0.4,-0.5,-1.0,-0.7,0.4,0.3]
+    }
+}
