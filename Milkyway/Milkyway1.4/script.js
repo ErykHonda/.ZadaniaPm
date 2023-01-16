@@ -1,6 +1,11 @@
-
+var StartDay = 0;
 
 window.onload = function()
+{
+    LoadAJAX()
+}
+
+function LoadAJAX()
 {
     //document.write(new Date(1673823600*1000))
 
@@ -8,12 +13,12 @@ window.onload = function()
     function(JLoad)
     {
         const akt = new Date()
-        const x = new Date(akt.getFullYear(),akt.getMonth())
-        console.log(x)
-        XXX= 0+92 
+        var Slast30 = new Date(akt.getFullYear(),akt.getMonth()-0,0).getDate()+new Date(akt.getFullYear(),akt.getMonth()-1,0).getDate()+new Date(akt.getFullYear(),akt.getMonth()-2,0).getDate()
+        //console.log(Slast30)
+        XXX= StartDay+Slast30 
         const PJSON = JSON.parse(JLoad);
-        document.getElementById("MinTemp") .innerHTML= (PJSON.daily.temperature_2m_min[0]+' '+PJSON.daily_units.temperature_2m_min);
-        document.getElementById("MaxTemp") .innerHTML = (PJSON.daily.temperature_2m_max[0]+' '+PJSON.daily_units.temperature_2m_max);
+        document.getElementById("MinTemp") .innerHTML= (PJSON.daily.temperature_2m_min[XXX]+' '+PJSON.daily_units.temperature_2m_min);
+        document.getElementById("MaxTemp") .innerHTML = (PJSON.daily.temperature_2m_max[XXX]+' '+PJSON.daily_units.temperature_2m_max);
         var month = (new Date(PJSON.daily.time[XXX]*1000).getMonth()+1)
         if(month<10)
         {
@@ -30,4 +35,22 @@ window.onload = function()
     }
     )
 
+}
+
+function ChangeDate(znak)
+{
+    switch(znak)
+    {
+        case '-':
+            {
+                StartDay = StartDay-1
+                break;
+            }
+        case '+':
+            {
+                StartDay = StartDay+1
+                break;
+            }
+    }
+    LoadAJAX()
 }
