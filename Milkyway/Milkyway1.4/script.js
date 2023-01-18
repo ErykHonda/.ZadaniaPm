@@ -5,11 +5,25 @@ window.onload = function()
     LoadAJAX()
 }
 
-function LoadAJAX()
+function LoadAJAX(unit)
 {
     //document.write(new Date(1673823600*1000))
+    var adres
+    switch(unit)
+    {
+        case 'C':
+            {
+                adres ='https://api.open-meteo.com/v1/forecast?latitude=52.23&longitude=21.01&daily=temperature_2m_max,temperature_2m_min&timeformat=unixtime&timezone=Europe%2FBerlin&past_days=92';
+                break;
+            }
+            case 'F':
+                {
+                    adres ='https://api.open-meteo.com/v1/forecast?latitude=52.23&longitude=21.01&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timeformat=unixtime&timezone=Europe%2FBerlin&past_days=92';
+                    break;
+                }
+    }
 
-    $("#trash").load('https://api.open-meteo.com/v1/forecast?latitude=52.23&longitude=21.01&daily=temperature_2m_max,temperature_2m_min&timeformat=unixtime&timezone=Europe%2FBerlin&past_days=92','',
+    $("#trash").load(adres,'',
     function(JLoad)
     {
         const akt = new Date()
@@ -25,19 +39,14 @@ function LoadAJAX()
             month = ('0'+month)
         }
         document.getElementById("Data").innerHTML = "Data: "+ new Date(PJSON.daily.time[XXX]*1000).getDate()+'.'+month+'.'+new Date(PJSON.daily.time[XXX]*1000).getFullYear()
-        var minuty = new Date().getMinutes()
-        if(minuty<10)
-        {
-            minuty = ('0'+minuty)
-        }
-        document.getElementById("Godzina").innerHTML =new Date().getHours() +':'+minuty
+        ChangeHour()
     
     }
     )
 
 }
 
-function ChangeDate(znak)
+function ChangeDate(znak,unit)
 {
     switch(znak)
     {
@@ -52,5 +61,39 @@ function ChangeDate(znak)
                 break;
             }
     }
-    LoadAJAX()
+    LoadAJAX(unit)
 }
+
+function ChangeUnit(unit)
+{
+    switch(unit)
+    {
+        case 'C':
+            {
+                document.getElementById("ChangeDay").innerHTML = "<strong class='przycisk'><input type='button' value='<'  onclick="+"ChangeDate('-','C')"+"></strong><strong id='Data'>Data: xx.xx.xxxx</strong><strong id='przycisk' class='przycisk'><input type='button' value='>' onclick="+"ChangeDate('+','C')"+"></strong>"
+                document.getElementById("ChangeUnit").innerHTML = '<input id="change" type="button" onclick="'+"ChangeUnit('F')"+'" value="Change (F)"></input>'
+                break;
+            }
+            case 'F':
+                {
+                    document.getElementById("ChangeDay").innerHTML = "<strong class='przycisk'><input type='button' value='<'  onclick="+"ChangeDate('-','F')"+"></strong><strong id='Data'>Data: xx.xx.xxxx</strong><strong id='przycisk' class='przycisk'><input type='button' value='>' onclick="+"ChangeDate('+','F')"+"></strong>"
+                    document.getElementById("ChangeUnit").innerHTML = '<input id="change" type="button" onclick="'+"ChangeUnit('C')"+'" value="Change (C)"></input>'
+                    break;
+                }
+    }
+    
+    LoadAJAX(unit)
+    ChangeHour()
+}
+
+
+function ChangeHour()
+{
+    var minuty = new Date().getMinutes()
+        if(minuty<10)
+        {
+            minuty = ('0'+minuty)
+        }
+        document.getElementById("Godzina").innerHTML =new Date().getHours() +':'+minuty
+}
+

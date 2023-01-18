@@ -1,7 +1,6 @@
 #okno {
     border: 3px solid #F5A34A;
     width: 300px;
-    height: 75px;
     margin: auto;
     margin-top: 100px;
     background-color: #F5F0B8;
@@ -20,16 +19,25 @@
 }
 #Data {
     display:inline-block;
-    width:260px;
+    width:254px;
     text-align:center;
 }
-.przycisk {
+.przycisk>input {
     display: inline-block;
-    width: 18px;
+    width: 23px;
+    height: 23px;
+    background-color: #FAB861;
+    border-radius: 20px;
 }
 #trash {
     display:none;
 }
 body {
     background-color: #FDDAAE;
+}
+#change 
+{
+    width:300px;
+    background-color: #FAB861;
+    border-radius:10px;
 }

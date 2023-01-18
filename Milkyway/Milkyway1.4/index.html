@@ -9,15 +9,17 @@
     <script src="script.js"></script>
     <script src="jquery-3.6.1.min.js"></script>
 </head>
-<body>
+<body onload="LoadAJAX('C')">
+    
     <div id="trash"></div>
     <div id="okno">
+        <div id="ChangeUnit"><input id="change" type="button" onclick="ChangeUnit('F')" value="Change (F)"></div>
         <div><strong class="tekst">Aktualna godzina:</strong><strong class="tekst2" id="Godzina">9:40</strong></div>
         <div>
             <div><strong class="tekst">Minimalna temperatura:</strong><strong class="tekst2" id="MinTemp"> 4 C</strong></div>
             <div><strong class="tekst">Maksymalna temperatura:</strong><strong class="tekst2" id="MaxTemp"> 18 C</strong></div>
         </div>
-        <div><strong class="przycisk"><input type="button" value="<"  onclick="ChangeDate('-')"/></strong><strong id="Data">Data: 16.01.2022</strong><strong id="przycisk" class="przycisk"><input type="button" value=">" onclick="ChangeDate('+')" /></strong></div>
+        <div id="ChangeDay"><strong class="przycisk"><input type="button" value="<"  onclick="ChangeDate('-','C')"/></strong><strong id="Data">Data: xx.xx.xxxx</strong><strong id="przycisk" class="przycisk"><input type="button" value=">" onclick="ChangeDate('+','C')" /></strong></div>
     </div>
 </body>
 </html>
