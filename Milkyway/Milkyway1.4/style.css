@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Plex;
+    src: url(https://fonts.googleapis.com/css2?family=Plex);
+}
+
+
 #okno {
     border: 3px solid #F5A34A;
     width: 300px;
