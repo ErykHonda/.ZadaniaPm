@@ -1,6 +1,6 @@
 class TabNN
 {
-public:
+private:
     int N;      // liczba elementów tablicy
     int *tab; //sama tablica
 
