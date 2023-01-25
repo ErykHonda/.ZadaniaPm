@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Z Pgoda</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body onload="LoadAJAX('C')">
+    
+    <div id="trash"></div>
+    <div id="okno">
+        <div id="ChangeUnit"><input id="change" type="button" onclick="ChangeUnit('F')" value="Change (F)"></div>
+        <div><strong class="tekst">Aktualna godzina:</strong><strong class="tekst2" id="Godzina">9:40</strong></div>
+        <div>
+            <div><strong class="tekst">Minimalna temperatura:</strong><strong class="tekst2" id="MinTemp"> 4 C</strong></div>
+            <div><strong class="tekst">Maksymalna temperatura:</strong><strong class="tekst2" id="MaxTemp"> 18 C</strong></div>
+        </div>
+        <div id="ChangeDay"><strong class="przycisk"><input type="button" value="<"  onclick="ChangeDate('-','C')"/></strong><strong id="Data">Data: xx.xx.xxxx</strong><strong id="przycisk" class="przycisk"><input type="button" value=">" onclick="ChangeDate('+','C')" /></strong></div>
+    </div>
+</body>
+</html>

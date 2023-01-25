@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Plex;
+    src: url(https://fonts.googleapis.com/css2?family=Plex);
+}
+
+
+#okno {
+    border: 3px solid #F5A34A;
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #F5F0B8;
+    border-radius:10px;
+    padding:5px;
+}
+.tekst {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+}
+.tekst2 {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+}
+#Data {
+    display:inline-block;
+    width:254px;
+    text-align:center;
+}
+.przycisk>input {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-color: #FAB861;
+    border-radius: 20px;
+}
+#trash {
+    display:none;
+}
+body {
+    background-color: #FDDAAE;
+}
+#change 
+{
+    width:300px;
+    background-color: #FAB861;
+    border-radius:10px;
+}
