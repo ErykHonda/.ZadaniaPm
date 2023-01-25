@@ -2,10 +2,17 @@ const ListaIn1 = ["Mleko","Chleb"];
 const ListaOut1 = ["Bułka"];
 const ListaIn2 = ["Mleko1","Chleb1"];
 const ListaOut2 = ["Bułka1"];
-const ListyIn = [ListaIn1];
-const ListyOut = [ListaOut1];
+const ListyIn = [ListaIn1];//Shoping list
+const ListyOut = [ListaOut1];//Delete Item
 //tłumaczenie
 var ListNumber,buttValue,NonValueAdd,ShopList,DeleteList,NewList;//języki
+
+
+function MoveItemToDelete(why)
+{
+
+}
+
 function StartingSeting(Lang,Theme)
 {
     setTheme(Theme)
